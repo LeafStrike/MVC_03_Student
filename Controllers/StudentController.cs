@@ -32,54 +32,6 @@ namespace MVC_project.Controllers
             throw new Exception("No student found for id " + id.ToString() + ".");
         }
 
-        public string GetStudentNameById(int id)
-        {
-            foreach(Student st in Students)
-            {
-                if (st.Id == id)
-                {
-                    return st.Name;
-                }
-            }
-            throw new Exception("No student found for id " + id.ToString() + ".");
-        }
-
-        public string GetStudentSurameById(int id)
-        {
-            foreach (Student st in Students)
-            {
-                if (st.Id == id)
-                {
-                    return st.Surname;
-                }
-            }
-            throw new Exception("No student found for id " + id.ToString() + ".");
-        }
-
-        public int GetStudentGroupById(int id)
-        {
-            foreach (Student st in Students)
-            {
-                if (st.Id == id)
-                {
-                    return st.GroupId;
-                }
-            }
-            throw new Exception("No student found for id " + id.ToString() + ".");
-        }
-
-        public string GetStudentStatusById(int id)
-        {
-            foreach (Student st in Students)
-            {
-                if (st.Id == id)
-                {
-                    return st.Status;
-                }
-            }
-            throw new Exception("No student found for id " + id.ToString() + ".");
-        }
-
         // UPDATE
         public ViewResult SetStudentName(int id, string name)
         {
@@ -131,6 +83,8 @@ namespace MVC_project.Controllers
             }
             throw new Exception("No student found for id " + id.ToString() + ".");
         }
+        
+        // DELETE
         public ViewResult DeleteStudentById(int id)
         {
             foreach (Student st in Students)
